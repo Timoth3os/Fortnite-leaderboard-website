@@ -1,0 +1,70 @@
+<!-- solo-supremacy-cup.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solo Supremacy Cup – Leaderboard</title>
+    <link rel="stylesheet" href="solo-supremacy-cup.css" />
+
+</head>
+<body>
+
+    <header class="header">
+        <button class="back-btn" onclick="location.href='/source/homepage.html'">← Back to Homepage</button>
+        <h1>Solo Supremacy Cup</h1>
+    </header>
+
+
+    <main class="container">
+
+        <!-- Streamer Card -->
+        <section class="streamer-card">
+            
+            <div class="streamer-profile">
+                <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/7cef1655-260d-40d2-ab67-11591372011a-profile_image-300x300.png" alt="Streamer Profile Picture" />
+            </div>
+
+            <div class="streamer-info">
+                <h2>Hosted by: <span>Risxble</span></h2>
+                <a href="https://twitch.tv/risxble" target="_blank">Watch on Twitch</a>
+            </div>
+
+            <div class="streamer-player">
+                <iframe
+                    src="https://player.twitch.tv/?channel=risxble&parent=fort-leaderboard.com"
+                    allowfullscreen
+                    scrolling="no">
+                </iframe>
+            </div>
+        
+        </section>
+
+
+        <!-- Leaderboard -->
+        <section class="leaderboard">
+            <div class="leaderboard-header">
+                <span>Placement</span>
+                <span>Players</span>
+                <span>Score</span>
+            </div>
+
+
+            <div id="leaderboard-body" class="leaderboard-body">
+                <!-- Rows injected by JS -->
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+        <button class="back-btn" onclick="location.href='/source/homepage.html'">← Back to Homepage</button>
+    </footer>
+
+    <audio id="refreshSound" src="\assets\fortnite-shield-potion-fortnite-battle-royale-gaming-sound-effect-hd-sound-effect_rnYyvja.mp3" preload="auto"></audio>
+
+    <script src="/source/leaderboards/solo_supremacy_cup/solo-supremacy-cup.js"></script>
+</body>
+
+</html>

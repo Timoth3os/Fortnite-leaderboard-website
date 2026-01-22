@@ -1,0 +1,86 @@
+<!-- till-elims-do-us-part.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Till Elims Do Us Part – Leaderboard</title>
+    <link rel="stylesheet" href="till-elims-do-us-part-cup.css" />
+</head>
+<body>
+
+
+    <header class="header">
+        <button class="back-btn" onclick="location.href='/source/homepage.html'">← Back to Hub</button>
+        <h1>Till Elims Do Us Part Co-Ed Cup</h1>
+    </header>
+
+
+    <main class="container">
+
+
+    <!-- Streamer Hosts -->
+    <section class="hosts">
+
+
+    <div class="streamer-card">
+        <div class="streamer-profile">
+            <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/4b949177-e4d3-4628-95f4-7924ee40e898-profile_image-300x300.png" alt="Streamer One" />
+        </div>
+        <div class="streamer-info">
+            <h2>Host: <span>KuhrinaColada</span></h2>
+            <a href="https://twitch.tv/kuhrinacolada" target="_blank">Watch on Twitch</a>
+        </div>
+        <div class="streamer-player">
+            <iframe
+            src="https://player.twitch.tv/?channel=kuhrinacolada&parent=fort-leaderboard.com"
+            allowfullscreen
+            scrolling="no"></iframe>
+        </div>
+    </div>
+
+
+    <div class="streamer-card">
+        <div class="streamer-profile">
+            <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/9bd5fe34-28f4-4bd0-bbbb-1ad5140b80a3-profile_image-300x300.png" alt="Streamer Two" />
+        </div>
+        <div class="streamer-info">
+            <h2>Host: <span>Sherlynttv</span></h2>
+            <a href="https://twitch.tv/sherlynttv" target="_blank">Watch on Twitch</a>
+        </div>
+        <div class="streamer-player">
+            <iframe
+            src="https://player.twitch.tv/?channel=sherlynttv&parent=fort-leaderboard.com"
+            allowfullscreen
+            scrolling="no"></iframe>
+        </div>
+    </div>
+
+
+    </section>
+
+    <!-- Leaderboard -->
+    <section class="leaderboard">
+        <div class="leaderboard-header">
+            <span>Placement</span>
+            <span>Team</span>
+            <span>Score</span>
+        </div>
+
+
+        <div id="leaderboard-body"></div>
+    </section>
+
+
+    </main>
+
+
+    <footer class="footer">
+        <button class="back-btn" onclick="location.href='/source/homepage.html'">← Back to Hub</button>
+    </footer>
+
+    <div id="heart-container"></div>
+    <audio id="refreshSound" src="\assets\kh_sound_effects.mp3" preload="auto"></audio>
+    <script src="/source/leaderboards/till_elims_do_us_part_co-ed_cup/till-elims-do-us-part-cup.js"></script>
+</body>
+</html>

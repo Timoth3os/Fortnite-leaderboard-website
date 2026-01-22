@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Arctic Annihilation Leaderboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Burbank+Big+Condensed:wght@700&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        margin: 0;
+        background: linear-gradient(180deg, #021024 0%, #022140 50%, #013A63 100%);
+        font-family: 'Burbank Big Condensed', sans-serif;
+        color: white;
+        overflow-x: hidden;
+    }
+
+    /* MAIN TITLE */
+    h1 {
+        text-align: center;
+        margin-top: 40px;
+        font-size: 70px;
+        text-shadow: 0 0 20px #00eaff, 0 0 40px #00eaff;
+    }
+
+    nav {
+        text-align: right;
+        justify-content: space-between;
+        padding: 20px;
+        background: rgba(0,0,0,0.3);
+    }
+
+    nav a {
+        color: #7fd8ff;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .streamers {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        margin-top: 100px;
+        flex-wrap: nowrap;
+    }
+
+    .streamer-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        color: #7fd8ff;
+        background: rgba(255,255,255,0.08);
+        padding: 20px;
+        border-radius: 16px;
+        width: 200px;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .streamer-card img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 3px solid #7fd8ff;
+        margin-bottom: 15px;
+    }
+
+    .streamer-card span {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .streamer-card:hover {
+        transform: translateY(-10px) scale(1.05);
+        box-shadow: 0 0 30px rgba(127,216,255,0.6);
+    }
+    
+    .streamer-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 320px;
+    }
+
+    .streamer-wrapper iframe {
+        margin-top: 20px;
+        border-radius: 16px;
+        border: 2px solid rgba(127,216,255,0.4);
+        box-shadow: 0 0 20px rgba(127,216,255,0.3);
+    }
+
+    /* SNOW EFFECT */
+    .snow {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        background: url('https://www.animationsoftware7.com/img/agifs/snow02.gif');
+        animation: snow 12s linear infinite;
+        opacity: 0.4;
+    }
+
+    @keyframes snow {
+        from { background-position: 0 0; }
+        to { background-position: 0 1000px; }
+    }
+
+    /* LEADERBOARD BOX */
+    .leaderboard {
+        width: 70%;
+        margin: 50px auto;
+        background: rgba(255, 255, 255, 0.08);
+        padding: 20px;
+        border-radius: 20px;
+        backdrop-filter: blur(10px);
+        border: 3px solid rgba(0, 255, 255, 0.3);
+        box-shadow: 0 0 20px cyan, 0 0 40px cyan inset;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 32px;
+    }
+
+    th {
+        padding: 15px;
+        background: rgba(0, 255, 255, 0.2);
+        border-bottom: 3px solid cyan;
+        text-shadow: 0 0 10px cyan;
+    }
+
+    td {
+        padding: 15px;
+        text-align: center;
+    }
+
+    tr:nth-child(even) {
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    /* PLACEMENT COLORS */
+    .placement {
+        font-size: 40px;
+        text-shadow: 0 0 15px #00eaff;
+    }
+
+    .gold { color: #FFD700; text-shadow: 0 0 25px #FFD700; }
+    .silver { color: #C0C0C0; text-shadow: 0 0 25px #C0C0C0; }
+    .bronze { color: #CD7F32; text-shadow: 0 0 25px #CD7F32; }
+
+    @keyframes bounce {
+        from { transform: translateY(0); }
+        to { transform: translateY(-10px); }
+    }
+
+    /* GLOW ANIMATION ON CHANGE */
+    .glow-change {
+        animation: glowFlash 1s ease-out;
+    }
+
+    @keyframes glowFlash {
+        0% { box-shadow: 0 0 0px cyan; }
+        50% { box-shadow: 0 0 30px cyan; }
+        100% { box-shadow: 0 0 0px cyan; }
+    }
+
+    /* SHOUTOUT TEXT (BOTTOM RIGHT) */
+    #shoutoutBox {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        background: rgba(0,0,0,0.4);
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-size: 26px;
+        color: #00eaff;
+        backdrop-filter: blur(6px);
+        text-shadow: 0 0 10px #00eaff;
+        animation: slideLeft 20s linear infinite;
+        white-space: nowrap;
+    }
+
+    @keyframes slideLeft {
+        0% { transform: translateX(100%); }
+        100% { transform: translateX(-120%); }
+    }
+</style>
+
+    <nav>
+        <a href="\source\homepage.html">← Back to Homepage</a>
+    </nav>
+
+</head>
+
+<body>
+    <h1>🎮 Hosting Event Streamers 🎮</h1>
+
+    <div class="streamers">
+    
+    <div class="streamer-wrapper">
+    
+        <a class="streamer-card" href="https://twitch.tv/dreamyxvibes" target="_blank">
+            <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/6de227c5-b438-4627-9439-e4e08889b8d9-profile_image-300x300.png" alt="dreamyxvibes">
+            <span>DreamyxVibes</span>
+        </a>
+
+        <iframe
+            src="https://player.twitch.tv/?channel=dreamyxvibes&parent=fort-leaderboard.com"
+            height="240"
+            width="100%"
+            allowfullscreen>
+        </iframe>
+
+    </div>
+
+    <div class="streamer-wrapper">
+
+        <a class="streamer-card" href="https://twitch.tv/sherlynttv" target="_blank">
+            <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/9bd5fe34-28f4-4bd0-bbbb-1ad5140b80a3-profile_image-300x300.png" alt="sherlynttv">
+            <span>Sherlynttv</span>
+        </a>
+
+        <iframe
+            src="https://player.twitch.tv/?channel=sherlynttv&parent=fort-leaderboard.com"
+            height="240"
+            width="100%"
+            allowfullscreen>
+        </iframe>
+
+    </div>
+
+    <div class="streamer-wrapper">
+
+        <a class="streamer-card" href="https://twitch.tv/kuhrinacolada" target="_blank">
+            <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/4b949177-e4d3-4628-95f4-7924ee40e898-profile_image-300x300.png" alt="kuhrinacolada">
+            <span>KuhrinaColada</span>
+        </a>
+
+        <iframe
+            src="https://player.twitch.tv/?channel=kuhrinacolada&parent=fort-leaderboard.com"
+            height="240"
+            width="100%"
+            allowfullscreen>
+        </iframe>
+
+    </div>
+
+  </div>
+
+</body>
+
+<body>
+
+<div class="snow"></div>
+
+<h1>❄ Arctic Annihilation LEADERBOARD ⛄</h1>
+
+<div class="leaderboard">
+    <table id="leaderboardTable">
+        <thead>
+            <tr>
+                <th>Placement</th>
+                <th>Player</th>
+                <th>Score</th>
+                
+            </tr>
+        </thead>
+        <tbody id="leaderboardBody">
+            <tr><td colspan="4">Loading...</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Fortnite refresh sound -->
+<audio id="refreshSound" src="assets\fortnite-shield-potion-fortnite-battle-royale-gaming-sound-effect-hd-sound-effect_rnYyvja.mp3"></audio>
+
+<!-- SHOUTOUT BOX -->
+<div id="shoutoutBox">Shoutouts: Special thanks to @DREAMYXVIBES @SHERLYNTTV @KUHRINACOLADA | Follow on Twitch | GLHF! | @Tavo_t4vo Web Dev (> ‿ ◠)✌</div>
+
+<script>
+const API_URL = "https://script.google.com/macros/s/AKfycbwipSs9XRSUvXfjEY2lNCqAz7iFsLSEZlZfjEecq6n1Q66QWV9HtTHQ-Nr1BJtkkgRs/exec"; // <— replace with your Apps Script URL
+
+let previousData = [];
+
+// Play refresh sound
+function playRefreshSound() {
+    document.getElementById("refreshSound").play();
+}
+
+async function loadLeaderboard() {
+    playRefreshSound();
+
+    const tbody = document.getElementById("leaderboardBody");
+
+    try {
+        const response = await fetch(API_URL);
+        const data = await response.json();
+
+        // Sort by placement
+        data.sort((a, b) => a.placement - b.placement);
+
+        tbody.innerHTML = "";
+
+        data.forEach((entry, i) => {
+            let placeClass = "placement";
+            if (entry.placement == 1) placeClass = "placement gold";
+            if (entry.placement == 2) placeClass = "placement silver";
+            if (entry.placement == 3) placeClass = "placement bronze";
+
+            // Check if changed
+            let changed = JSON.stringify(entry) !== JSON.stringify(previousData[i]);
+
+            tbody.innerHTML += `
+                <tr class="${changed ? 'glow-change' : ''}">
+                    <td class="${placeClass}">${entry.placement}</td>
+                    <td>${entry.team}</td>
+                    <td>${entry.score}</td>
+                </tr>
+            `;
+        });
+
+        previousData = data;
+
+    } catch (error) {
+        tbody.innerHTML = `<tr><td colspan="4">Error loading data.</td></tr>`;
+        console.error(error);
+    }
+}
+
+loadLeaderboard();
+setInterval(loadLeaderboard, 60000); // refresh every minute
+</script>
+
+<footer>
+    <nav>
+        <a href="\source\homepage.html">Tavo Secret</a>
+    </nav>
+    
+</footer>
+
+</body>
+</html>
