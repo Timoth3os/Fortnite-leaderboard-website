@@ -73,8 +73,8 @@ body {
 
 
 .streamer-profile img {
-    width: 90px;
-    height: 90px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     border: 3px solid var(--pink);
     box-shadow: 0 0 20px rgba(255,95,207,0.6);
@@ -185,4 +185,5 @@ body {
     transform: translateY(-120px) scale(1.5);
     opacity: 0;
   }
+
 }
