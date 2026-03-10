@@ -53,6 +53,12 @@ body {
     gap: 50px;
 }
 
+.streamer-player {
+    display: list-item;
+    gap: 100rem;
+    margin-bottom: 1.5rem;
+}
+
 /* Hosts */
 .hosts {
     display: list-item;
