@@ -54,7 +54,7 @@ body {
 }
 
 .streamer-player {
-    display: list-item;
+    display: grid;
     gap: 100rem;
     margin-bottom: 1.5rem;
 }
