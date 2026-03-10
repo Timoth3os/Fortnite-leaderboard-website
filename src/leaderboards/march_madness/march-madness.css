@@ -53,7 +53,7 @@ body {
     gap: 50px;
 }
 
-.streamer-player {
+.players-twitch {
     display: grid;
     gap: 100rem;
     margin-bottom: 1.5rem;
