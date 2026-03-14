@@ -11,7 +11,7 @@ async function updateLeaderboard() {
         const res = await fetch(SHEET_URL);
         const data = await res.json();
 
-        /*spawnHearts();*/
+        spawnHearts();
         board.innerHTML = '';
 
 
