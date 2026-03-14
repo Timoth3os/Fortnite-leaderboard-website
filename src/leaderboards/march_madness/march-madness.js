@@ -34,14 +34,14 @@ async function updateLeaderboard() {
     }
 }
 
-/*Heart Animation (Heart Burst)
+/*Heart Animation (Heart Burst)*/
 function spawnHearts() {
   const container = document.getElementById("heart-container");
 
   for (let i = 0; i < 12; i++) {
     const heart = document.createElement("div");
     heart.className = "heart";
-    heart.textContent = "💗";
+    heart.textContent = "🍀";
 
     heart.style.left = Math.random() * 100 + "vw";
     heart.style.top = "80vh";
@@ -51,7 +51,7 @@ function spawnHearts() {
 
     setTimeout(() => heart.remove(), 3000);
   }
-} */
+} 
 
 updateLeaderboard();
 setInterval(updateLeaderboard, 60000);
