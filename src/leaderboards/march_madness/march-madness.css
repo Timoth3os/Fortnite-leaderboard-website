@@ -181,7 +181,7 @@ body {
 }
 
 
-/* Heart Reload Animation
+/* Heart Reload Animation*/
 #heart-container {
   position: fixed;
   inset: 0;
@@ -206,4 +206,4 @@ body {
     transform: translateY(-120px) scale(1.5);
     opacity: 0;
   }
-}*/
+}
