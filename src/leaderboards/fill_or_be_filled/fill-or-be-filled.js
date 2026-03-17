@@ -20,7 +20,7 @@ async function updateLeaderboard() {
             div.className = 'row';
             div.innerHTML = `
             <span>#${i + 1}</span>
-            <span>${row.player} & ${row.player2} </span>
+            <span>${row.player} </span>
             <span>${row.score}</span>
             `;
             board.appendChild(div);
