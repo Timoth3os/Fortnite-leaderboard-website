@@ -41,7 +41,7 @@ function spawnHearts() {
   for (let i = 0; i < 12; i++) {
     const heart = document.createElement("div");
     heart.className = "heart";
-    heart.textContent = "🔮";
+    heart.textContent = "🔮 WOW";
 
     heart.style.left = Math.random() * 100 + "vw";
     heart.style.top = "80vh";
