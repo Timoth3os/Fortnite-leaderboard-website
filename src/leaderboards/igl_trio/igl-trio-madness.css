@@ -1,8 +1,8 @@
 /* igl-trio-madness.css */
 :root {
-    --pink: #78f360;
-    --deep-pink: #128334;
-    --bg-card: rgba(12, 99, 34, 0.85);
+    --pink: #f3cc60;
+    --deep-pink: #836512;
+    --bg-card: rgba(99, 61, 12, 0.85);
     --text: #fff;
 }
 
@@ -94,7 +94,7 @@ body {
     height: 150px;
     border-radius: 50%;
     border: 3px solid var(--pink);
-    box-shadow: 0 0 20px rgba(255,95,207,0.6);
+    box-shadow: 0 0 20px rgb(255, 191, 95);
 }
 
 
@@ -145,7 +145,7 @@ body {
 
 
 .leaderboard-header {
-    background: rgba(255,95,207,0.2);
+    background: rgba(255, 191, 95, 0.2);
     font-weight: bold;
 }
 
