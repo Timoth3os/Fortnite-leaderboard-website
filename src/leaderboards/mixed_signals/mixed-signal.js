@@ -3,7 +3,7 @@ const board = document.getElementById('leaderboard-body');
 const sound = document.getElementById('refreshSound');
 
 
-const SHEET_URL = 'https://script.google.com/macros/s/AKfycbxUHGV5rPYjjOFiDz8UUhSJy3Fj3xsKW9VIEbTPR4KMF2sfejVNPU-6XFQRcnqcbjrpOw/exec';
+const SHEET_URL = 'https://script.google.com/macros/s/AKfycbwiUwA4YYetLRA8-sMN2sZ9979jlYzZPkgO-S_ikzHoFWWbQl4xhc29JcHd9E9ufmMo/exec';
 
 
 async function updateLeaderboard() {
@@ -41,7 +41,7 @@ function spawnHearts() {
   for (let i = 0; i < 12; i++) {
     const heart = document.createElement("div");
     heart.className = "heart";
-    heart.textContent = "🏄‍♀️";
+    heart.textContent = "🍂";
 
     heart.style.left = Math.random() * 100 + "vw";
     heart.style.top = "80vh";
