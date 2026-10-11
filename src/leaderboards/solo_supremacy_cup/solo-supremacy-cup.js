@@ -20,7 +20,7 @@ async function fetchLeaderboard() {
             div.className = 'row';
             div.innerHTML = `
             <span>#${index + 1}</span>
-            <span>${row.player}</span>
+            <span>${row.player} & ${row.player2}</span>
             <span>${row.score}</span>
             `;
             leaderboardBody.appendChild(div);

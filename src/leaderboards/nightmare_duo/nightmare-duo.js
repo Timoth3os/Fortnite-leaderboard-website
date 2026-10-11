@@ -42,7 +42,7 @@ function spawnHearts() {
     const heart = document.createElement("div");
     heart.className = "heart";
     const img = document.createElement("img");
-    img.src = "assets/screamtwerk-ghostface-meme-emoji-1400591220711096421.gif";
+    img.src = "/assets/screamtwerk-ghostface-meme-emoji-1400591220711096421.gif";
     
     /*heart.textContent = "\assets\screamtwerk-ghostface-meme-emoji-1400591220711096421.gif";*/
 
