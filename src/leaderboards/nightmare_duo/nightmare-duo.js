@@ -43,7 +43,11 @@ function spawnHearts() {
     heart.className = "heart";
     const img = document.createElement("img");
     img.src = "/assets/screamtwerk-ghostface-meme-emoji-1400591220711096421.gif";
-    
+    img.alt = "Ghostface meme";
+    img.className = "heart-gif";
+
+    heart.appendChild(img);
+
     /*heart.textContent = "\assets\screamtwerk-ghostface-meme-emoji-1400591220711096421.gif";*/
 
     heart.style.left = Math.random() * 100 + "vw";

@@ -197,6 +197,12 @@ body {
   opacity: 0.8;
 }
 
+.heart-gif {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
 @keyframes floatUp {
   from {
     transform: translateY(0) scale(1);
