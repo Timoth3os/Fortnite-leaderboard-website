@@ -3,7 +3,7 @@ const board = document.getElementById('leaderboard-body');
 const sound = document.getElementById('refreshSound');
 
 
-const SHEET_URL = 'https://script.google.com/macros/s/AKfycbwiUwA4YYetLRA8-sMN2sZ9979jlYzZPkgO-S_ikzHoFWWbQl4xhc29JcHd9E9ufmMo/exec';
+const SHEET_URL = 'https://script.google.com/macros/s/AKfycbzzhcQig1yMuIUPzSm-Dv87bmgneIo6yDCkp8H26A-IVlyaS_XItpneQJajDD1-HJaofQ/exec';
 
 
 async function updateLeaderboard() {
