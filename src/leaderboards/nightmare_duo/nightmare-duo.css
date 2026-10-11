@@ -1,8 +1,8 @@
 /* nightmare-duo.css */
 :root {
     --pink: #ffffff;
-    --deep-pink: #1d1b1d;
-    --bg-card: rgba(204, 27, 160, 0.85);
+    --deep-pink: #423042;
+    --bg-card: rgba(88, 35, 75, 0.85);
     --text: #fff;
 }
 
@@ -94,7 +94,7 @@ body {
     height: 150px;
     border-radius: 50%;
     border: 3px solid var(--pink);
-    box-shadow: 0 0 20px rgb(255, 191, 95);
+    box-shadow: 0 0 20px rgb(255, 255, 255);
 }
 
 
