@@ -41,7 +41,10 @@ function spawnHearts() {
   for (let i = 0; i < 12; i++) {
     const heart = document.createElement("div");
     heart.className = "heart";
-    heart.textContent = "\assets\screamtwerk-ghostface-meme-emoji-1400591220711096421.gif";
+    const img = document.createElement("img");
+    img.src = "assets/screamtwerk-ghostface-meme-emoji-1400591220711096421.gif";
+    
+    /*heart.textContent = "\assets\screamtwerk-ghostface-meme-emoji-1400591220711096421.gif";*/
 
     heart.style.left = Math.random() * 100 + "vw";
     heart.style.top = "80vh";
